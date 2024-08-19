@@ -15,9 +15,11 @@ This document contains all the necessary files and configurations for the Vite P
 │   └── index.ts
 ├── vite.config.ts
 ├── tsconfig.json
+├── tsconfig.node.json
 ├── jest.config.js
 ├── .eslintrc.json
 ├── .versionrc
+├── .npmignore
 ├── package.json
 └── README.md
 ```
@@ -278,6 +280,62 @@ export default {
 }
 ```
 
+### .npmignore
+
+```
+# Source files
+src/
+
+# Config files
+vite.config.ts
+tsconfig.json
+tsconfig.node.json
+jest.config.js
+.eslintrc.json
+.versionrc
+
+# Development files
+*.log
+*.tsbuildinfo
+
+# Version control
+.git
+.gitignore
+
+# Dependencies
+node_modules/
+
+# Test files
+__tests__/
+*.test.ts
+*.test.tsx
+
+# Build output (uncomment if you want to exclude dist from npm package)
+# dist/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Misc
+README.md
+CHANGELOG.md
+LICENSE
+```
+
 ### package.json
 
 ```json
@@ -386,6 +444,7 @@ To use this template, follow these steps:
 ├── jest.config.js
 ├── .eslintrc.json
 ├── .versionrc
+├── .npmignore
 └── package.json
 ```
 
