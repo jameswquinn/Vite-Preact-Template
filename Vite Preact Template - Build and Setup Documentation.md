@@ -350,7 +350,8 @@ LICENSE
     "test": "jest",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prepare": "husky install",
-    "release": "standard-version"
+    "release": "standard-version",
+    "publish": "npm run build && npm test && npm run lint && npm publish"
   },
   "dependencies": {
     "preact": "^10.13.1",
@@ -427,6 +428,7 @@ To use this template, follow these steps:
 - `npm test`: Run the test suite
 - `npm run lint`: Lint the codebase
 - `npm run release`: Generate a new version and update the changelog
+- `npm run publish`: Build, test, lint, and publish to npm
 
 ## Project Structure
 
@@ -490,7 +492,21 @@ Modify the ESLint rules in `.eslintrc.json` to match your code style preferences
 
 ## Deployment
 
-To deploy your app:
+### To npm
+To publish your library to npm:
+
+1. Make sure you're logged in to npm (`npm login`)
+2. Update the version in package.json
+3. Run `npm run publish`
+
+This script will:
+- Build the project
+- Run tests
+- Lint the code
+- Publish to npm
+
+### As a web application
+To deploy your app as a web application:
 
 1. Run `npm run build` to create a production build
 2. Deploy the contents of the `dist/` directory to your hosting provider
@@ -512,4 +528,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
-This compilation includes all the necessary files and configurations for the Vite Preact Template. You can copy and paste these files directly into your GitHub repository to set up the project structure.
+This compilation includes all the necessary files and configurations for the Vite Preact Template. You can copy and paste these files directly into your GitHub repository to set up the project structure. The
