@@ -1,6 +1,6 @@
-# Vite Preact Template - Build and Setup Documentation
+# Vite Preact Template - Build and Setup Documentation (Part 1)
 
-This document contains all the necessary files and configurations for the Vite Preact Template. You can copy and paste these files directly into your GitHub repository.
+This document contains the first part of the necessary files and configurations for the Vite Preact Template.
 
 ## File Structure
 
@@ -18,6 +18,7 @@ This document contains all the necessary files and configurations for the Vite P
 ├── tsconfig.node.json
 ├── jest.config.js
 ├── .eslintrc.json
+├── .prettierrc
 ├── .versionrc
 ├── .npmignore
 ├── package.json
@@ -130,6 +131,9 @@ export default App;
 export { default as App } from './App';
 export { default as PlaceholderComponent } from './components/PlaceholderComponent';
 ```
+# Vite Preact Template - Build and Setup Documentation (Part 2)
+
+This document contains the second part of the necessary files and configurations for the Vite Preact Template.
 
 ### vite.config.ts
 
@@ -242,7 +246,8 @@ export default {
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:preact/recommended"
+    "plugin:preact/recommended",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -260,6 +265,21 @@ export default {
   }
 }
 ```
+
+### .prettierrc
+
+```json
+{
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2
+}
+```
+# Vite Preact Template - Build and Setup Documentation (Part 3)
+
+This document contains the third part of the necessary files and configurations for the Vite Preact Template.
 
 ### .versionrc
 
@@ -292,6 +312,7 @@ tsconfig.json
 tsconfig.node.json
 jest.config.js
 .eslintrc.json
+.prettierrc
 .versionrc
 
 # Development files
@@ -349,6 +370,7 @@ LICENSE
     "preview": "vite preview",
     "test": "jest",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\"",
     "prepare": "husky install",
     "release": "standard-version",
     "publish": "npm run build && npm test && npm run lint && npm publish"
@@ -365,10 +387,12 @@ LICENSE
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-preact": "^0.1.0",
     "husky": "^8.0.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^2.8.8",
     "standard-version": "^9.5.0",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.2",
@@ -388,68 +412,13 @@ LICENSE
   }
 }
 ```
+# Vite Preact Template - Build and Setup Documentation (Part 4)
 
-### README.md
+This document contains the fourth part of the necessary files and configurations for the Vite Preact Template, including the complete README.md file.
+
+### README.md (continued)
 
 ```markdown
-# Vite Preact Template
-
-This is a template for creating Preact applications using Vite, with TypeScript, Jest for testing, ESLint for linting, and styled-components for CSS-in-JS styling. It also includes a basic example component and automatic versioning setup.
-
-## Features
-
-- Vite for fast development and optimized builds
-- Preact for efficient UI rendering
-- TypeScript for type safety
-- Jest and Testing Library for unit testing
-- ESLint for code linting
-- Styled-components for CSS-in-JS (with an example of standard CSS as well)
-- Automatic versioning and changelog generation
-
-## Getting Started
-
-To use this template, follow these steps:
-
-1. Clone this repository or use it as a template for your new project
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the development server:
-   ```
-   npm run dev
-   ```
-
-## Available Scripts
-
-- `npm run dev`: Start the development server
-- `npm run build`: Build the project for production
-- `npm run preview`: Preview the production build locally
-- `npm test`: Run the test suite
-- `npm run lint`: Lint the codebase
-- `npm run release`: Generate a new version and update the changelog
-- `npm run publish`: Build, test, lint, and publish to npm
-
-## Project Structure
-
-```
-/
-├── src/
-│   ├── components/
-│   │   ├── PlaceholderComponent.tsx
-│   │   ├── PlaceholderComponent.css
-│   │   └── PlaceholderComponent.test.tsx
-│   ├── App.tsx
-│   └── index.ts
-├── vite.config.ts
-├── tsconfig.json
-├── jest.config.js
-├── .eslintrc.json
-├── .versionrc
-├── .npmignore
-└── package.json
-```
-
 ## Extending the Template
 
 ### Adding New Components
@@ -486,9 +455,9 @@ This template includes both styled-components and an example of standard CSS. Ch
 
 Add new tests in `*.test.tsx` files alongside your components. Run tests using `npm test`.
 
-### Linting
+### Linting and Formatting
 
-Modify the ESLint rules in `.eslintrc.json` to match your code style preferences.
+Modify the ESLint rules in `.eslintrc.json` and Prettier rules in `.prettierrc` to match your code style preferences.
 
 ## Deployment
 
@@ -528,4 +497,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
-This compilation includes all the necessary files and configurations for the Vite Preact Template. You can copy and paste these files directly into your GitHub repository to set up the project structure. The
+
