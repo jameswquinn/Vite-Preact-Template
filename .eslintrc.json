@@ -4,6 +4,11 @@
     "es2021": true,
     "jest": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -18,10 +23,14 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "preact"],
+  "plugins": ["@typescript-eslint", "eslint-plugin-preact"],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "preact/no-unused-props": "error"
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "varsIgnorePattern": "^h$" }
+    ],
+    "react/jsx-no-bind": "off"
   }
 }
