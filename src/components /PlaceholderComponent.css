@@ -1,1 +1,7 @@
-placeholder
+/* Example of using a standard CSS file
+   You can modify this or remove it if you prefer to use only CSS-in-JS */
+.placeholder-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
