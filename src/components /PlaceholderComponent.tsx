@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const PlaceholderComponent = () => {
+const PlaceholderComponent = (): h.JSX.Element => {
   // Example of using useState hook for state management
   // Replace this with your own state logic as needed
   const [count, setCount] = useState(0);
@@ -29,9 +29,7 @@ const PlaceholderComponent = () => {
       {/* Replace this with your own JSX */}
       <h1>Hello World</h1>
       <p>Click Count: {count}</p>
-      <StyledButton onClick={() => setCount(count + 1)}>
-        Increment
-      </StyledButton>
+      <StyledButton onClick={() => setCount(count + 1)}>Increment</StyledButton>
     </div>
   );
 };
